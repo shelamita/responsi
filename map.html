@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETA SEHATI</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Font Google API -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=my_location" />
+    <!-- Leaflet Plugin Search -->
+    <link rel="stylesheet" href="plugin/leaflet-search-master/leaflet-search-master/dist/leaflet-search.min.css">
+    <!-- Leaflet Plugin Default Extent -->
+    <link rel="stylesheet"
+        href="plugin/Leaflet.defaultextent-master/Leaflet.defaultextent-master/dist/leaflet.defaultextent.css">
+    <!-- Leaflet Geolocation Plugin CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.73.0/dist/L.Control.Locate.min.css" />
+    <!-- Leaflet Draw -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+
+    <style>
+        body {
+
+            background-color: #ffe6e6;
+        }
+
+        .leaflet-control-locate {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .leaflet-control-locate i {
+            color: #007bff;
+            /* Warna ikon */
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            /* Make sure it's above other content */
+        }
+
+        .bg-light {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e2e6ea 100%);
+        }
+
+        .poppins-semibold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .poppins-medium {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .judul-peta {
+            margin-left: 10px;
+            /* Geser teks ke kanan 10px */
+        }
+
+
+        #mapContainer {
+            height: calc(100vh - 80px);
+            /* Header tinggi default Bootstrap: 56px */
+            width: 100%;
+        }
+
+        .hero {
+            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .map-container {
+            height: 500px;
+        }
+
+        footer {
+            background: #660000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand poppins-semibold judul-peta" href="#">
+                <img src="icon\icon.png" alt="Logo" style="height: 40px;">
+                PETA SEHATI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item poppins-medium"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item poppins-medium"><a class="nav-link" href="map.html">Map</a></li>
+                    <li class="nav-item poppins-medium"><a class="nav-link" href="index.html#info">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Map Section -->
+    <section id="map">
+        <div class="container-fluid">
+            <div id="mapContainer" class="map-container"></div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="featureModal" tabindex="-1" aria-labelledby="featureModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="featureModalTitle"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="featureModalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Shelamita. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Leaflet Control Search Plugin -->
+    <script src="plugin\leaflet-search-master\leaflet-search-master\dist\leaflet-search.min.js"></script>
+    <!-- Leaflet Control Deafult -->
+    <script
+        src="plugin\Leaflet.defaultextent-master\Leaflet.defaultextent-master\dist\leaflet.defaultextent.js"></script>
+    <!-- Leaflet Geolocation Plugin JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.73.0/dist/L.Control.Locate.min.js"></script>
+    <!-- Leaflet Draw -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+
+    <!-- GeoJSON Example -->
+    <script>
+        // Inisialisasi Peta
+        const map = L.map('mapContainer').setView([-0.490806, 104.461205], 9); // Koordinat untuk Kabupaten Lingga
+
+        // Tile Layer
+        var openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        });
+
+        var stamenToner = L.tileLayer('https://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://stamen.com/">Stamen Design</a> | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            subdomains: 'abcd',
+            minZoom: 0,
+            maxZoom: 20,
+        });
+
+        var cartoDBPositron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://carto.com/attributions">CartoDB</a> | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        });
+
+        var esriWorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: '&copy; <a href="https://www.esri.com/">Esri</a> | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        });
+
+        var openTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://opentopomap.org/">OpenTopoMap</a> contributors | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        });
+
+        var thunderforestOutdoors = L.tileLayer('https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.thunderforest.com/">Thunderforest</a> | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            apiKey: 'YOUR_API_KEY_HERE'
+        });
+
+        // Menambahkan tile layer pertama ke dalam peta
+        openStreetMap.addTo(map);
+
+        // GeoJSON Point Fasilitas Kesehatan
+        var faskes = L.geoJSON(null, {
+            // Style
+            pointToLayer: function (feature, latlng) {
+                return L.marker(latlng, {
+                    icon: L.icon({
+                        iconUrl: "icon/pin.png", // icon marker
+                        iconSize: [30, 30], // ukuran icon
+                        iconAnchor: [24, 48], // posisi icon terhadap titik (point)
+                        popupAnchor: [0, -48], // posisi popup terhadap icon
+                        tooltipAnchor: [-16, -30], // posisi tooltip terhadap icon
+                    }),
+                });
+            },
+            // onEachFeature
+            onEachFeature: function (feature, layer) {
+                var image = feature.properties.IMAGE ? "<img src='" + feature.properties.IMAGE + "' alt='Gambar' style='width:200px; height:auto;'>" : "Gambar tidak tersedia";
+                var popup_content = `
+                    <div style="font-family: Arial, sans-serif; color: #333; padding: 5px;">
+                    <h4 style="margin: 0; color: #0056b3;">${feature.properties.NAME || "Belum Terdata"}</h4>
+                    <hr style="border: 0.5px solid #ccc;">
+                    <p style="margin: 5px 0;"><strong>Alamat:</strong> ${feature.properties.ALAMAT || "Tidak tersedia"}</p>
+                    <p style="margin: 5px 0;"><strong>Koordinat:</strong> 
+                        ${feature.geometry.coordinates[1]}, ${feature.geometry.coordinates[0]}</p>
+                        <div>${image}</div>
+                    </div>
+                `;
+
+                layer.on({
+                    click: function (e) {
+                        $("#featureModalTitle").html("Fasilitas Kesehatan " + feature.properties.REMARK);
+                        $("#featureModalBody").html(popup_content);
+                        $("#featureModal").modal("show");
+                    },
+                    mouseover: function (e) {
+                        faskes.bindTooltip(feature.properties.REMARK, {
+                            direction: "top",
+                            sticky: true,
+                        });
+                    },
+                });
+            },
+        });
+
+        $.getJSON("data/layanan_kesehatan_kab_lingga.geojson", function (data) {
+            faskes.addData(data); // Menambahkan data ke dalam GeoJSON Point Fasilitas Kesehatan
+            map.addLayer(faskes); // Menambahkan GeoJSON Point Fasilitas Kesehatan ke dalam peta
+        });
+
+        // GeoJSON Polyline Jalan
+        var jalan = L.geoJSON(null, {
+            // Style
+            style: function (feature) {
+                return {
+                    color: "red",
+                    opacity: 1,
+                    weight: 2,
+                };
+            },
+            // onEachFeature
+            onEachFeature: function (feature, layer) {
+                var popup_content = "Fungsi: " + feature.properties.REMARK + "<br>" +
+                    "Panjang (m): " + feature.properties.panjang_m;
+
+                layer.on({
+                    click: function (e) {
+                        $("#featureModalTitle").html("Jalan");
+                        $("#featureModalBody").html(popup_content);
+                        $("#featureModal").modal("show");
+                    },
+                    mouseover: function (e) {
+                        jalan.bindTooltip(feature.properties.REMARK, {
+                            direction: "auto",
+                            sticky: true,
+                        });
+                    },
+                });
+            },
+        });
+
+        $.getJSON("data/jalan_kab_lingga.geojson", function (data) {
+            jalan.addData(data); // Menambahkan data ke dalam GeoJSON Polyline Jalan
+            map.addLayer(jalan); // Menambahkan GeoJSON Polyline Jalan ke dalam peta
+        });
+
+        // GeoJSON Polygon Administrasi Kabupaten Lingga
+        map.createPane('paneadminLingga');
+        map.getPane("paneadminLingga").style.zIndex = 301;
+
+        var admin_lingga = L.geoJSON(null, {
+            pane: 'paneadminLingga',
+
+            // onEachFeature
+            onEachFeature: function (feature, layer) {
+                // variable popup content
+                var popup_content = "KECAMATAN " + feature.properties.NAMOBJ;
+
+
+                layer.on({
+                    click: function (e) {
+
+                        //Menampilkan Feature Modal
+                        $("#featureModalTitle").html("Administrasi Kabupaten Lingga"); //Memasukkan teks judul ke dalam tittle
+                        $("#featureModalBody").html(popup_content); //Memasukkan teks ke dalam Body
+                        $("#featureModal").modal("show"); //Memunculkan Modal
+                    },
+
+                    mouseover: function (e) {
+                        admin_lingga.bindTooltip(feature.properties.NAMOBJ, {
+                            direction: "auto",
+                            sticky: true,
+                        });
+                    },
+                });
+            },
+        });
+
+        $.getJSON("data/administrasi_kab_lingga.geojson", function (data) {
+            admin_lingga.addData(data); // Menambahkan data ke dalam GeoJSON Polygon Administrasi Kabupaten Lingga
+            map.addLayer(admin_lingga); // Menambahkan GeoJSON Polygon Administrasi Kabupaten Lingga ke dalam peta
+        });
+
+        // Control untuk memilih tile layer
+        var baseMaps = {
+            "OpenStreetMap": openStreetMap,
+            "Stamen Toner": stamenToner,
+            "CartoDB Positron": cartoDBPositron,
+            "Esri World Imagery": esriWorldImagery,
+            "OpenTopoMap": openTopoMap,
+            "Thunderforest Outdoors": thunderforestOutdoors,
+        };
+
+        var overlayMaps = {
+            "Fasilitas Kesehatan": faskes,
+            "Jalan": jalan,
+            "Administrasi Kabupaten Lingga": admin_lingga
+        };
+
+        var controllayer = L.control.layers(baseMaps, overlayMaps);
+        controllayer.addTo(map);
+
+        //Back to Default Extent
+        L.control.defaultExtent()
+            .addTo(map);
+
+        // Kontrol pencarian
+        var searchControl = new L.Control.Search({
+            layer: admin_lingga,
+            propertyName: 'NAMOBJ',
+            marker: false,
+            moveToLocation: function (latlng, title, map) {
+                //map.fitBounds( latlng.layer.getBounds() );
+                var zoom = map.getBoundsZoom(latlng.layer.getBounds());
+                map.setView(latlng, zoom); // access the zoom
+            }
+        });
+
+        searchControl.on('search:locationfound', function (e) {
+
+            //console.log('search:locationfound', );
+
+            //map.removeLayer(this._markerSearch)
+
+            e.layer.setStyle({ fillColor: '#a4bfeb', color: '#9d49a3' });
+            if (e.layer._popup)
+                e.layer.openPopup();
+
+        }).on('search:collapsed', function (e) {
+
+            jumlah_penduduk.eachLayer(function (layer) {	//restore feature color
+                jumlah_penduduk.resetStyle(layer);
+            });
+        });
+
+        map.addControl(searchControl);
+
+        // Menambahkan kontrol geolocation ke peta
+        var geolocateControl = L.control.locate({
+            position: 'topright',  // Posisi tombol
+            strings: {
+                title: "Show me where I am"  // Judul tombol
+            },
+            locateOptions: {
+                maxZoom: 16,  // Zoom ketika lokasi ditemukan
+                watch: true    // Memantau lokasi secara terus-menerus
+            },
+            html: function () {
+                // Membuat tombol dengan ikon material-symbols-outlined
+                return '<a href="#" class="leaflet-control-locate-button"><span class="material-symbols-outlined">my_location</span></a>';
+            }
+        }).addTo(map);
+
+        // Event handler saat lokasi ditemukan
+        map.on('locationfound', function (e) {
+            console.log('Lokasi ditemukan:', e.latlng);
+
+            L.marker(e.latlng).addTo(map)
+                .bindPopup("You are here")
+                .openPopup();
+
+            map.setView(e.latlng, 15); // Menetapkan zoom
+        });
+
+        // Menangani error lokasi
+        map.on('locationerror', function (e) {
+            alert("Lokasi tidak ditemukan: " + e.message);
+        });
+
+        var drawnItems = new L.FeatureGroup();
+        map.addLayer(drawnItems);
+
+        var drawControl = new L.Control.Draw({
+            edit: {
+                featureGroup: drawnItems
+            },
+            draw: {
+                polygon: true,
+                polyline: true,
+                rectangle: false,  // Menghilangkan rectangle
+                circle: false,     // Menghilangkan circle
+                marker: true       // Mengaktifkan titik
+            }
+        });
+        map.addControl(drawControl);
+
+        // Event listener saat objek digambar
+        map.on('draw:created', function (e) {
+            var layer = e.layer;
+            drawnItems.addLayer(layer);
+
+            // Menampilkan informasi jenis dan koordinat objek
+            if (layer instanceof L.Marker) {
+                alert("Titik: " + layer.getLatLng());
+            } else if (layer instanceof L.Polygon) {
+                alert("Poligon dengan koordinat: " + layer.getLatLngs());
+            } else if (layer instanceof L.Polyline) {
+                alert("Garis dengan koordinat: " + layer.getLatLngs());
+            }
+        });
+
+    </script>
+</body>
+
+</html>

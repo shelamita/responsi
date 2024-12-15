@@ -1,0 +1,941 @@
+{
+    "type": "FeatureCollection",
+    "name": "layanan_kesehatan_kab_lingga",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": null,
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.386295328000074,
+                    -0.643552270999976,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": null,
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.402943156000049,
+                    -0.409884166999973,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": null,
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.394728250000071,
+                    -0.289289673999974,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Puskesmas/Puskesmas Pembantu",
+                "NAME": "Puskesmas Penuba",
+                "LAYANAN": "",
+                "IMAGE": "data/image/puskesmas_panuba.jpg",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": "Jl. dr sumito, RT.002/RW.002, Penuba, Kec. Selayar, Kabupaten Lingga, Kepulauan Riau",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.460183293000057,
+                    -0.328176603999964,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": null,
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.317128689000072,
+                    -0.535019720999969,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Puskesmas/Puskesmas Pembantu",
+                "NAME": "Puskesmas Senayang",
+                "LAYANAN": "",
+                "IMAGE": "data/image/puskesmas_senayang.jpg",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": "Jalan Nusantara, Senayang, Kabupaten Lingga, Kepulauan Riau 29873",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.650417608000055,
+                    0.042584907000048,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": null,
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.33582524600007,
+                    -0.388474359999975,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Puskesmas/Puskesmas Pembantu",
+                "NAME": "Puskesmas Raya Singkep Barat",
+                "LAYANAN": "",
+                "IMAGE": "data/image/puskesmas_rsb.jpg",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": "Jl. Soekarno - Hatta, Kp. Tengah, Kec. Singkep Bar., Kabupaten Lingga, Kepulauan Riau 29871",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.450388128000043,
+                    -0.463164717999973,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": null,
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.54233488400007,
+                    -0.396947122999961,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "Rumah Sakit Umum Daerah Dabo",
+                "LAYANAN": "Central Sterile supplay Departement (CSSD), Pemulasaran Jenazah, Sanitasi Lingkungan, Ambulance, Laundry, Pengaduan, Radiologi, Laboratorium, Bedah Sentral, Gizi, Farmasi, Rawat Jalan, Rawat Inap, High Care Unit, UGD, Rekam Medis",
+                "IMAGE": "data/image/rsdabo.jpeg",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": "Jl. Kesehatan No.1, Dabo Lama, Kec. Singkep, Kabupaten Lingga, Kepulauan Riau 29871",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.559610748000068,
+                    -0.490458264999972,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": null,
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.46798756700008,
+                    -0.241009962999954,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": null,
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.481990955000072,
+                    -0.161650745999964,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": null,
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.756449376000035,
+                    -0.202911297999947,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": null,
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.613275120000083,
+                    -0.138918312999976,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": null,
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.593179224000039,
+                    -0.225987101999976,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Puskesmas/Puskesmas Pembantu",
+                "NAME": "Puskesmas Bukit Cening",
+                "LAYANAN": "Periksa kesehatan (check up), pembuatan surat keterangan sehat, rawat jalan, lepas jahitan, ganti balutan, jahit luka, cabut gigi, periksan tensi, tes hamil, periksa anak, tes golongan darah, asam urat, kolesterol dan lainnya",
+                "IMAGE": "data/image/puskesmas_bukit_ceking.png",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": "Daik, Lingga, Lingga Regency, Riau Islands 29872",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.606461461000038,
+                    -0.224205191999943,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "Rumah Sakit Umum Daerah Encik Mariyam Lingga",
+                "LAYANAN": "",
+                "IMAGE": "data/image/rsud_encik_mariyam.jpg",
+                "EMAIL": "rsud.encikmariyam@gmail.com",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": "Jl. Masjid Jami Sultan Lingga No.46, Daik, Kec. Lingga, Kabupaten Lingga, Kepulauan Riau 29872",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.614217154000073,
+                    -0.214371195999945,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": null,
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.631761266000069,
+                    -0.075724440999977,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": null,
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.737226527000075,
+                    -0.218734576999964,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Posyandu",
+                "NAME": "Posyandu Desa Musai",
+                "LAYANAN": "",
+                "IMAGE": "data/image/posyandu_musai.jpg",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": "Musai, Lingga, Lingga Regency, Riau Islands",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.678831591000062,
+                    -0.188045433999946,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Posyandu",
+                "NAME": "Posyandu anggur panggak laut, CG",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 1,
+                "ALAMAT": "Panggak Laut, Lingga, Lingga Regency, Riau Islands",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.64151381366516,
+                    -0.20568195748004178,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Puskesmas/Puskesmas Pembantu",
+                "NAME": "",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 0,
+                "ALAMAT": null,
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    105.268753556000036,
+                    -1.212587163999956,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Puskesmas/Puskesmas Pembantu",
+                "NAME": "Puskesmas Pulau Berhala, Kepri",
+                "LAYANAN": "periksa kesehatan (check up), pembuatan surat keterangan sehat, rawat jalan, lepas jahitan, ganti balutan, jahit luka, cabut gigi, periksan tensi, tes hamil, periksa anak, tes golongan darah, asam urat, kolesterol dan lainnya",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 0,
+                "ALAMAT": "Berhala, Singkep, Lingga Regency, Riau Islands",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.40430207703845,
+                    -0.8577928010446113,
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Puskesmas/Puskesmas Pembantu",
+                "NAME": "PUSKESMAS POSEK Kec. KEPPO",
+                "LAYANAN": "Layanan Dalam Gedung dan Luar Gedung",
+                "IMAGE": "data/image/puskesmas_posek.jpg",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 0,
+                "ALAMAT": "Posek, Singkep Barat, Lingga Regency, Riau Islands",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.23214470729114,
+                    -0.3686382523456523, 
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Puskesmas/Puskesmas Pembantu",
+                "NAME": "Puskesmas Dabo Lama",
+                "LAYANAN": "Laboratorium, UGD, Cryoterapi, KIA/KB",
+                "IMAGE": "data/image/puskesmas_dabo.jpg",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 0,
+                "ALAMAT": "Jl. Raja Ali H., Dabo Lama, Kec. Singkep, Kabupaten Lingga, Kepulauan Riau 29871",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.5582961468794,
+                    -0.5028015580743744,  
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Puskesmas/Puskesmas Pembantu",
+                "NAME": "Polindes Air Salak",
+                "LAYANAN": "",
+                "IMAGE": "data/image/polindes_salak.jpg",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 0,
+                "ALAMAT": null,
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.47498280575806,
+                    -0.4793149062958053,   
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Puskesmas/Puskesmas Pembantu",
+                "NAME": "POLINDES KOTE SAKTI",
+                "LAYANAN": "",
+                "IMAGE": "data/image/polindes_sakti.jpg",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 0,
+                "ALAMAT": "Kote, Singkep, Lingga Regency, Riau Islands",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.51390301876116,
+                    -0.3645338028637425,   
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Puskesmas/Puskesmas Pembantu",
+                "NAME": "Puskesmas Sungai Pinang",
+                "LAYANAN": "",
+                "IMAGE": "data/image/puskesmas_pinang.jpg",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 0,
+                "ALAMAT": "Unnamed Road, Sei Pinang, Kec. Lingga, Kabupaten Lingga, Kepulauan Riau 29872",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.51390301876116,
+                    -0.3645338028637425,   
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Puskesmas/Puskesmas Pembantu",
+                "NAME": "Pustu Desa Limbung",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 0,
+                "ALAMAT": "Limbung, Lingga Utara, Lingga Regency, Riau Islands",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.78397322713236,
+                    -0.20200444672967857,    
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Puskesmas/Puskesmas Pembantu",
+                "NAME": "PUSTU Desa Bukit Langkap",
+                "LAYANAN": "",
+                "IMAGE": "data/image/pustu_langkap.jpg",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 0,
+                "ALAMAT": "Bukitlangkap, Lingga, Lingga Regency, Riau Islands 29874",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.72302588107273, 
+                    -0.1934345117269786,     
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Rumah Sakit Umum",
+                "NAME": "Rumah Sakit Umum Lapangan Lingga",
+                "LAYANAN": "",
+                "IMAGE": "",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 0,
+                "ALAMAT": "Masjid Jami Sultan, Jalan, Panggak Laut, Lingga, Lingga Regency, Riau Islands 29872",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.67454532821189,
+                    -0.16012543532586604,     
+                    0.0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "LCODE": "GI0020",
+                "REMARK": "Puskesmas/Puskesmas Pembantu",
+                "NAME": "Puskesmas Pancur",
+                "LAYANAN": "",
+                "IMAGE": "data/image/puskesmas_pancur.jpg",
+                "METADATA": null,
+                "SRS_ID": null,
+                "TIPRST": 0,
+                "JPLYRS": 0,
+                "ALAMAT": "Duara, Kec. Lingga Utara, Kabupaten Lingga, Kepulauan Riau 29874",
+                "KWKPKM_": 0,
+                "KMPPKM_": 0,
+                "JPLPKM_": 0,
+                "PKMKODE_": null,
+                "PKMKAT_": 0,
+                "PKMLMT_": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    104.63169158046692,
+                    -0.07579401845650952,   
+                    0.0
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETA SEHATI</title>
+    <!-- Pemetaan Sehat Lingga Tercinta.
+    Peta fasilitas kesehatan untuk masyarakat Lingga yang sehati dan peduli. 
+    -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffe6e6;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .poppins-light-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .poppins-medium {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .poppins-semibold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .poppins-bold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .judul-peta {
+            margin-left: 10px;
+            /* Geser teks ke kanan 10px */
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            /* Make sure it's above other content */
+        }
+
+        .hero {
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('icon/header-pink.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            min-height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-divider {
+            height: 30px;
+            background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+        }
+
+        .section-title {
+            font-family: "Poppins", sans-serif;
+            /* Font Poppins */
+            font-weight: 500;
+            /* Medium */
+            font-size: 28px;
+            /* Ukuran lebih besar */
+            text-align: center;
+            /* Rata tengah */
+            color: #2c3e50;
+            /* Warna teks */
+            text-transform: uppercase;
+            /* Huruf kapital semua */
+            letter-spacing: 2px;
+            /* Spasi antar huruf */
+            margin-bottom: 20px;
+            /* Jarak bawah */
+            position: relative;
+            /* Relatif untuk dekorasi tambahan */
+        }
+
+        .section-title::after {
+            content: "";
+            /* Pseudo-element garis bawah */
+            display: block;
+            width: 60px;
+            /* Panjang garis */
+            height: 4px;
+            /* Ketebalan garis */
+            background-color: #3498db;
+            /* Warna garis */
+            margin: 10px auto 0;
+            /* Tengah secara horizontal */
+            border-radius: 2px;
+            /* Sudut garis melengkung */
+        }
+
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #007bff;
+        }
+
+        .detail {
+            font-style: italic;
+        }
+
+        .blockquote.detail {
+            font-size: 1.2em;
+            color: #333;
+            font-style: italic;
+            border-left: 5px solid #ff0000;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card-section {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #ffcccc;
+        }
+
+        .card-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Menambahkan efek hover pada tombol */
+        .btn-info:hover {
+            background-color: #17a2b8;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Menambahkan border-radius dan padding tambahan pada card */
+        .card-info {
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid #ff4d4d;
+        }
+
+        .card-info-body {
+            padding: 30px;
+        }
+
+        .card-title {
+            color: #660000;
+            /* Teks judul berwarna merah */
+        }
+
+        /* Tombol dengan warna merah */
+        .btn-danger {
+            background-color: #ff4d4d;
+            /* Tombol merah */
+            border-color: #ff4d4d;
+        }
+
+        .btn-danger:hover {
+            background-color: #e03e3e;
+            /* Efek hover tombol */
+        }
+
+        /* Mengatur background gradient untuk card-body saat hover */
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            /* Efek bayangan saat hover */
+            transform: translateY(-5px);
+            /* Sedikit angkat card */
+        }
+
+        .toast-body {
+            color: #ff4d4d;
+            /* Warna teks toast */
+        }
+
+        /* Menambahkan efek bayangan dan border pada card */
+        .card-info-shadow {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Menambahkan background gradient pada section */
+        .bg-light {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e2e6ea 100%);
+        }
+
+        /* Gambar Card */
+        .card-img-top {
+            max-height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            /* Membuat gambar berbentuk lingkaran */
+            margin: 20px auto 10px;
+            width: 150px;
+        }
+
+        .card-body {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            min-height: 200px;
+        }
+
+        .card-body-feature {
+            background-color: #ffcccc;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        .card-body .blockquote {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .card-body p {
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+
+        .card-body-pink {
+            background-color: #ffe6e6;
+            padding: 20px;
+            text-align: center;
+            min-height: 200px;
+        }
+
+        .card-body-pink .blockquote {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .card-body-pink p {
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+
+        .lucu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 15px;
+        }
+
+        .lucu {
+            background-color: #e9ecef;
+            border-radius: 8px;
+            padding: 5px 10px;
+            font-size: 0.85rem;
+            color: #495057;
+        }
+
+        .blockquote-footer {
+            background-color: #660000;
+            padding: 8px;
+            text-align: center;
+            color: #ffffff;
+            font-size: 0.85rem;
+        }
+
+        .btn-success {
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 123, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-success:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.3);
+        }
+
+        .btn-peta {
+            background-color: #007bff;
+            /* Blue color for the button */
+            color: white;
+            /* Text color white */
+            border: none;
+            border-radius: 25px;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .btn-peta:hover {
+            background-color: #0056b3;
+            /* Darker blue on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            /* Shadow effect on hover */
+        }
+
+        .btn-peta:focus {
+            outline: none;
+        }
+
+        .btn-custom {
+            background-color: #ff4d4d;
+            /* Warna merah */
+            color: white;
+            /* Warna teks putih */
+            border: none;
+            /* Menghilangkan border */
+        }
+
+        .btn-custom:hover {
+            background-color: #e60000;
+            /* Warna merah lebih gelap saat hover */
+        }
+
+
+        .hover-link {
+            transition: all 0.3s ease;
+        }
+
+        .hover-link:hover {
+            background-color: #660000;
+            /* Warna coral saat hover */
+            transform: scale(1.05);
+            /* Efek pembesaran lebih kecil */
+        }
+
+        .nav-link {
+            font-size: 14px;
+            /* Ukuran font lebih kecil */
+            padding: 6px 12px;
+            /* Padding yang lebih ramping */
+        }
+
+        footer {
+            background: #660000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand poppins-semibold judul-peta" href="#">
+                <img src="icon\icon.png" alt="Logo" style="height: 40px;">
+                PETA SEHATI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item poppins-medium"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item poppins-medium"><a class="nav-link" href="map.html">Map</a></li>
+                    <li class="nav-item poppins-medium"><a class="nav-link" href="#info">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container d-flex justify-content-center align-items-center">
+            <div style="padding: 20px; text-align: center;">
+                <h1 class="fw-bold mb-3 poppins-bold" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                    Pusat Informasi Fasilitas Kesehatan Kabupaten Lingga
+                </h1>
+                <p class="lead mb-4 poppins-light-italic" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
+                    Temukan lokasi dan informasi lengkap tentang layanan kesehatan di Kabupaten Lingga untuk mendukung
+                    kesehatan masyarakat
+                </p>
+                <a href="#features" class="btn btn-danger btn-lg poppins-regular">Cari Fasilitas Kesehatan</a>
+                <a href="map.html" class="btn btn-danger btn-lg poppins-regular">Lihat Persebaran Faskes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4 poppins-medium section-title">Jenis Fasilitas Kesehatan</h2>
+            <div class="row g-4">
+                <div class="container my-5">
+                    <div class="row text-center">
+                        <!-- Rumah Sakit -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card-section h-100 shadow-sm border-0 rounded">
+                                <!-- Gambar Rumah Sakit -->
+                                <img src="icon/rumahsakit.png" alt="Rumah Sakit" class="card-img-top mx-auto mt-3"
+                                    style="max-height: 100px; width: auto;">
+                                <!-- Isi Card -->
+                                <div class="card-body-feature">
+                                    <h5 class="card-title text-danger poppins-medium">Rumah Sakit</h5>
+                                    <p class="card-text poppins-light-italic">Institusi pelayanan kesehatan yang
+                                        menyediakan pelayanan rawat
+                                        inap, rawat jalan, dan gawat darurat.</p>
+                                </div>
+                                <!-- Tombol -->
+                                <div class="mb-3">
+                                    <a href="#rumahsakit" class="btn btn-outline-danger btn-sm poppins-medium">Cari
+                                        Rumah Sakit di Kab
+                                        Lingga</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Puskesmas -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card-section h-100 shadow-sm border-0 rounded">
+                                <!-- Gambar Puskesmas -->
+                                <img src="icon/puskesmas.png" alt="Puskesmas" class="card-img-top mx-auto mt-3"
+                                    style="max-height: 100px; width: auto;">
+                                <!-- Isi Card -->
+                                <div class="card-body-feature">
+                                    <h5 class="card-title text-success poppins-medium">Puskesmas</h5>
+                                    <p class="card-text poppins-light-italic">Fasilitas pelayanan kesehatan tingkat
+                                        pertama yang bertujuan
+                                        menyelenggarakan upaya kesehatan masyarakat.</p>
+                                </div>
+                                <!-- Tombol -->
+                                <div class="mb-3">
+                                    <a href="#puskesmas" class="btn btn-outline-success btn-sm poppins-medium">Cari
+                                        Puskesmas di Kab
+                                        Lingga</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Posyandu -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card-section h-100 shadow-sm border-0 rounded">
+                                <!-- Gambar Posyandu -->
+                                <img src="icon/posyandu.png" alt="Posyandu" class="card-img-top mx-auto mt-3"
+                                    style="max-height: 100px; width: auto;">
+                                <!-- Isi Card -->
+                                <div class="card-body-feature">
+                                    <h5 class="card-title text-primary poppins-medium">Posyandu</h5>
+                                    <p class="card-text poppins-light-italic">Pos pelayanan terpadu dari masyarakat
+                                        untuk memberdayakan dan
+                                        memberikan kemudahan dalam layanan kesehatan.</p>
+                                </div>
+                                <!-- Tombol -->
+                                <div class="mb-3">
+                                    <a href="#posyandu" class="btn btn-outline-primary btn-sm poppins-medium">Cari
+                                        Posyandu di Kab
+                                        Lingga</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Detail Rumah Sakit -->
+    <section id="rumahsakit" class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="mb-4 display-6 text-uppercase section-title poppins-medium"
+                style="letter-spacing: 1.5px; color: #495057;">
+                Rumah Sakit
+            </h2>
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card-section shadow-sm">
+                        <img src="data/image/rsdabo.jpeg" class="card-img-top" alt="Rumah Sakit Daerah Dabo">
+                        <div class="card-body-pink">
+                            <blockquote class="blockquote detail">Rumah Sakit Umum Daerah Dabo</blockquote>
+                            <p>082391100355 | rsud.dabo@gmail.com | www.rsuddabo.linggakab.go.id</p>                          </p>
+                            <p>Jl. Kesehatan No.1, Dabo Lama, Kec. Singkep, Kabupaten Lingga, Kepulauan Riau 29871</p>
+                            <div class="lucu-container">
+                                <p class="lucu">Ambulance</p>
+                                <p class="lucu">Pemulasaran Jenazah</p>
+                                <p class="lucu">Farmasi</p>
+                                <p class="lucu">High Care Unit</p>
+                                <p class="lucu">UGD</p>
+                                <p class="lucu">Bedah Sentral</p>
+                                <p class="lucu">Lainnya</p>
+                            </div>
+                        </div>
+                        <footer class="blockquote-footer">Fasilitas Kesehatan Kabupaten Lingga</footer>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card-section shadow-sm">
+                        <img src="data/image/rsud_encik_mariyam.jpg" class="card-img-top"
+                            alt="Rumah Sakit Encik Mariyam Lingga">
+                        <div class="card-body-pink">
+                            <blockquote class="blockquote detail">Rumah Sakit Umum Daerah Encik Mariyam Lingga
+                            </blockquote>
+                            <p>07767031478 | http://www.rsudem.linggakab.go.id</p>
+                            <p>Jl. Masjid Jami Sultan Lingga No.46, Daik, Kec. Lingga, Kabupaten Lingga, Kepulauan Riau
+                                29872</p>
+                            <div class="lucu-container">
+                                <p class="lucu">Medik Dasar</p>
+                                <p class="lucu">Medik Gigi Mulut</p>
+                                <p class="lucu">KIA/KB</p>
+                                <p class="lucu">Penyakit Dalam</p>
+                                <p class="lucu">UGD</p>
+                                <p class="lucu">Radiologi</p>
+                                <p class="lucu">Lainnya</p>
+                            </div>
+                        </div>
+                        <footer class="blockquote-footer">Fasilitas Kesehatan Kabupaten Lingga</footer>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card-section shadow-sm">
+                        <img src="data/image/rsum_lingga.jpg" class="card-img-top"
+                            alt="Rumah Sakit Umum Lapangan Lingga">
+                        <div class="card-body-pink">
+                            <blockquote class="blockquote detail">Rumah Sakit Umum Lapangan Lingga</blockquote>
+                            <p>081372771583 | rsl_lingga@yahoo.co.id</p>
+                            <p>Masjid Jami Sultan, Jalan, Panggak Laut, Lingga, Lingga Regency, Riau Islands 29872</p>
+                            <div class="lucu-container">
+                                <p class="lucu">Medik Dasar</p>
+                                <p class="lucu">Medik Gigi Mulut</p>
+                                <p class="lucu">Oftalmologi</p>
+                                <p class="lucu">Penyakit Dalam</p>
+                                <p class="lucu">UGD</p>
+                                <p class="lucu">Farmasi</p>
+                                <p class="lucu">Lainnya</p>
+                            </div>
+                        </div>
+                        <footer class="blockquote-footer">Fasilitas Kesehatan Kabupaten Lingga</footer>
+                    </div>
+                </div>
+            </div>
+            <!-- Tombol Selengkapnya -->
+            <div class="text-center mt-4">
+                <a href="database.php" class="btn btn-custom px-4 py-2">Lihat Selengkapnya</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Detail Puskesmas -->
+    <section id="puskesmas" class="py-5" style="background-color: #ffe6e6;">
+        <div class="container text-center">
+            <h2 class="mb-4 display-6 text-uppercase section-title poppins-medium"
+                style="letter-spacing: 1.5px; color: #495057;">Puskesmas</h2>
+            <div class="row g-4">
+                <!-- Card for Puskesmas Penuba -->
+                <div class="col-md-4">
+                    <div class="card-section shadow-sm">
+                        <img src="data\image\puskesmas_panuba.jpg" class="card-img-top" alt="Puskesmas Penuba">
+                        <div class="card-body">
+                            <blockquote class="blockquote detail">
+                                Puskesmas Penuba
+                            </blockquote>
+                            <p>@puskesmaspenuba | 082210046081 | pkmpenubaberseri@gmail.com</p>
+                            <p>Jl. dr sumito, RT.002/RW.002, Penuba, Kec. Selayar, Kabupaten Lingga, Kepulauan Riau
+                            </p>
+                            <div class="lucu-container">
+                                <p class="lucu">Pengaduan</p>
+                                <p class="lucu">Ruang Bersalin</p>
+                                <p class="lucu">Rawat Inap</p>
+                                <p class="lucu">Farmasi</p>
+                                <p class="lucu">UGD</p>
+                                <p class="lucu">Laboratorium</p>
+                                <p class="lucu">Lainnya</p>
+                            </div>
+                        </div>
+                        <footer class="blockquote-footer text-white">Fasilitas Kesehatan Kabupaten Lingga</footer>
+                    </div>
+                </div>
+
+                <!-- Card for Puskesmas Sungai Pinang -->
+                <div class="col-md-4">
+                    <div class="card-section shadow-sm">
+                        <img src="data\image\puskesmas_pinang.jpg" class="card-img-top" alt="Puskesmas Sungai Pinang">
+                        <div class="card-body">
+                            <blockquote class="blockquote detail">
+                                Puskesmas Sungai Pinang
+                            </blockquote>
+                            <p>@pkmsungaipinang_lingga | Seipinang_pkm@yahoo.co.id</p>
+                            <p>Unnamed Road, Sei Pinang, Kec. Lingga, Kabupaten Lingga, Kepulauan Riau 29872
+                            </p>
+                            <div class="lucu-container">
+                                <p class="lucu">Persalinan</p>
+                                <p class="lucu">Pendaftaran dan Rekam Medik</p>
+                                <p class="lucu">UGD</p>
+                                <p class="lucu">KIA/KB/Imunisasi</p>
+                                <p class="lucu">Gigi dan Mulut</p>
+                                <p class="lucu">Laboratorium</p>
+                                <p class="lucu">Lainnya</p>
+                            </div>
+                        </div>
+                        <footer class="blockquote-footer text-white">Fasilitas Kesehatan Kabupaten Lingga</footer>
+                    </div>
+                </div>
+
+                <!-- Card for Puskesmas POSEK -->
+                <div class="col-md-4">
+                    <div class="card-section shadow-sm">
+                        <img src="data\image\puskesmas_posek.jpg" class="card-img-top" alt="Puskesmas Sungai Pinang">
+                        <div class="card-body">
+                            <blockquote class="blockquote detail">
+                                Puskesmas Posek
+                            </blockquote>
+                            <p>@upt_puskesmas_posek | 082297933759 | pkmposek@gmail.com</p>
+                            <p>Posek, Singkep Barat, Lingga Regency, Riau Islands
+                            </p>
+                            <div class="lucu-container">
+                                <p class="lucu">Layanan Luar Gedung</p>
+                                <p class="lucu">Layanan Dalam Gedung</p>
+                                <p class="lucu">Lainnya</p>
+                            </div>
+                        </div>
+                        <footer class="blockquote-footer text-white">Fasilitas Kesehatan Kabupaten Lingga</footer>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="database.php#puskesmas" class="btn btn-custom px-4 py-2">Lihat Selengkapnya</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Detail Posyandu -->
+    <section id="posyandu" class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="mb-4 display-6 text-uppercase section-title poppins-medium"
+                style="letter-spacing: 1.5px; color: #495057;">Posyandu</h2>
+            <div class="row g-4">
+                <!-- Card for Posyandu Desa Musai -->
+                <div class="col-md-4">
+                    <div class="card-section shadow-sm">
+                        <img src="data/image/posyandu_musa.jpg" class="card-img-top" alt="Posyandu Desa Musai">
+                        <div class="card-body-pink">
+                            <blockquote class="blockquote detail">
+                                Posyandu Desa Musai
+                            </blockquote>
+                            <p>Musai, Lingga, Lingga Regency, Riau Islands
+                            </p>
+                        </div>
+                        <footer class="blockquote-footer text-white">Fasilitas Kesehatan Kabupaten Lingga</footer>
+                    </div>
+                </div>
+
+                <!-- Card for Posyandu anggur panggak laut, CG -->
+                <div class="col-md-4">
+                    <div class="card-section shadow-sm">
+                        <img src="" class="card-img-top" alt="Posyandu anggur panggak laut, CG">
+                        <div class="card-body-pink">
+                            <blockquote class="blockquote detail">
+                                Posyandu anggur panggak laut, CG
+                            </blockquote>
+                            <p>Panggak Laut, Lingga, Lingga Regency, Riau Islands
+                            </p>
+                        </div>
+                        <footer class="blockquote-footer text-white">Fasilitas Kesehatan Kabupaten Lingga</footer>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="database.php#posyandu" class="btn btn-custom px-4 py-2">Lihat Selengkapnya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informasi -->
+    <section id="info" class="py-5" style="background-color: #ffe6e6;">
+        <div class="container text-center">
+            <h2 class="mb-4 display-6 text-uppercase section-title poppins-medium"
+                style="letter-spacing: 1.5px; color: #495057;">About</h2>
+            <div class="row">
+                <!-- Column 1: About -->
+                <div class="col-md-4 mb-4">
+                    <div class="card-section shadow-lg border-0 rounded-3" style="border: 2px solid #ff4d4d;">
+                        <div class="card-info-body">
+                            <p class="card-text poppins-medium" style="text-align: justify;">
+                                <span style="color: #ff0000;">PETA SEHATI</span> merupakan platform untuk mempermudah
+                                akses informasi mengenai fasilitas
+                                kesehatan di Kabupaten Lingga.
+                                <span style="color: #ff0000;">PETA SEHATI</span> menyajikan data persebaran fasilitas
+                                kesehatan lengkap dengan informasi
+                                layanan, lokasi, dan kontak yang dapat dihubungi.
+                                <span style="color: #ff0000;">PETA SEHATI</span> dapat meningkatkan akses masyarakat
+                                terhadap fasilitas kesehatan, membantu
+                                dalam menemukan layanan yang dibutuhkan dengan mudah, dan mendukung peningkatan kualitas
+                                hidup melalui informasi yang akurat dan terkini.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Kritik dan Saran -->
+                <div class="col-md-4 mb-4">
+                    <div class="card-info shadow-lg border-0 rounded-3" style="border: 2px solid;">
+                        <div class="card-info-body">
+                            <h4 class="card-title text-center poppins-medium">Kritik dan Saran</h4>
+                            <form id="feedbackForm">
+                                <div class="mb-3">
+                                    <label for="nama" class="form-label poppins-regular">Nama</label>
+                                    <input type="text" class="form-control" id="nama" name="nama" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label poppins-regular">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="kritik" class="form-label poppins-regular">Kritik dan
+                                        Saran</label>
+                                    <textarea class="form-control" id="kritik" name="kritik" rows="4"
+                                        required></textarea>
+                                </div>
+                                <button type="submit" class="poppins-medium btn btn-danger w-100">Kirim</button>
+                            </form>
+                            <!-- Bootstrap Toast (Notification) -->
+                            <div id="successToast" class="toast align-items-center text-bg-success mt-3" role="alert"
+                                aria-live="assertive" aria-atomic="true" style="display: none;">
+                                <div class="d-flex">
+                                    <div class="toast-body">
+                                        Kritik dan saran Anda berhasil dimasukkan!
+                                    </div>
+                                    <button type="button" class="poppins-medium btn-close btn-close-white me-2 m-auto"
+                                        data-bs-dismiss="toast" aria-label="Close"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Social Media -->
+                <div class="col-md-4 mb-4">
+                    <div class="card-info shadow-lg border-0 rounded-3" style="border: 2px solid;">
+                        <div class="card-info-body">
+                            <h4 class="card-title text-center poppins-medium">Knock Knock</h4>
+                            <p class="card-text text-center poppins-regular" style="color: #d6336c;">Info pembuat ada di
+                                sini, siap
+                                membantu!</p>
+                            <div class="d-flex justify-content-center gap-3">
+                                <a class="poppins-medium btn btn-danger px-4 py-2 rounded-pill shadow-lg" href="#"
+                                    data-bs-toggle="modal" data-bs-target="#infoModal">
+                                    <i class="fa-solid fa-circle-info"></i> Kepoin
+                                </a>
+                                <a class="poppins-medium btn btn-danger px-4 py-2 rounded-pill shadow-lg"
+                                    href="https://linggakab.go.id/" target="_blank" rel="noopener noreferrer">
+                                    Sumber Data
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Shelamita. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #ff4d4d; color: white;">
+                    <h1 class="modal-title fs-5" id="infoModalLabel">Informasi Pembuat</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Nama</th>
+                            <td>Shelamita</td>
+                        </tr>
+                        <tr>
+                            <th>NIM</th>
+                            <td>23/517749/SV/22825</td>
+                        </tr>
+                        <tr>
+                            <th>Kelas</th>
+                            <td>A</td>
+                        </tr>
+                    </table>
+                    <p>
+                        <a href="http://github.com/shelamita" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-outline-danger ms-2">Github</a>
+                        <a href="https://www.instagram.com/shelamita_aw/" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-outline-danger ms-2">Instagram</a>
+                        <a href="https://id.linkedin.com/in/shelamita-amanah-0398a0294" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-outline-danger ms-2">Linkedin</a>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript to handle form submission and show success toast -->
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            // Collect form data
+            var name = document.getElementById('nama').value;
+            var email = document.getElementById('email').value;
+            var kritik = document.getElementById('kritik').value;
+
+            // Validate form data (simple validation)
+            if (!name || !email || !kritik) {
+                alert('Semua kolom harus diisi!');
+                return;
+            }
+
+            // Simulate sending data (no actual PHP backend)
+            console.log('Nama: ' + name);
+            console.log('Email: ' + email);
+            console.log('Kritik dan Saran: ' + kritik);
+
+            // Show success toast after form submission
+            var toastElement = document.getElementById('successToast');
+            var toast = new bootstrap.Toast(toastElement);
+            toast.show();
+
+            // Optionally reset the form
+            document.getElementById('feedbackForm').reset();
+        });
+
+    </script>
+</body>
+
+</html>

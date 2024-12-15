@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/21a72914-00d0-494d-bf74-641ccf0cb335)# responsi
+# responsi
 WEBGIS Persebaran Fasilitas Kesehatan di Kabupaten Lingga, Riau
 Peta Sehati - Website GIS Persebaran Fasilitas Kesehatan Kabupaten Lingga
 
